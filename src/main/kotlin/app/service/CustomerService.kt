@@ -11,7 +11,7 @@ import javax.transaction.Transactional
 open class CustomerService(private val customerRepo: CustomerRepo) {
 
     @Transactional
-    open fun getAllCustomer(): Iterable<Customer> = customerRepo.findAll()
+    open fun getAllCustomer(): Collection<Customer> = customerRepo.findAll()
 
     @Transactional
     open fun getCustomerById(id: UUID): Customer = customerRepo.getOne(id)
@@ -20,7 +20,7 @@ open class CustomerService(private val customerRepo: CustomerRepo) {
     open fun addCustomer(customer: Customer): Customer = customerRepo.save(customer)
 
     @Transactional
-    open fun updateCustomer(id: UUID, customer: Customer): Customer = customerRepo.save(customer.copy(id = id))
+    open fun updateCustomer(id: UUID, customer: Customer): Customer = customerRepo.save(customer.copy(id = id))  //??!!
 
     @Transactional
     open fun deleteCustomer(id: UUID) = customerRepo.deleteById(id)

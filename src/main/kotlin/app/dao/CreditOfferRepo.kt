@@ -1,11 +1,10 @@
 package app.dao
 
-import app.domain.Customer
+import app.domain.CreditOffer
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 import java.util.*
 
 @Repository
-interface CustomerRepo : JpaRepository<Customer, UUID> {
-//    fun getCustomerCredits(customerId: UUID): Collection<Credit>
-}git
+interface CreditOfferRepo : JpaRepository<CreditOffer, UUID> {
+}

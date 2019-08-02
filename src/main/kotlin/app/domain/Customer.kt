@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
 import java.util.*
 import javax.persistence.*
 
+//
 
 @Entity
 @Table(name = "customer")

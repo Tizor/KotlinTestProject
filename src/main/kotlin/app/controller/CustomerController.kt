@@ -9,7 +9,7 @@ import java.util.*
 @RequestMapping("/customers")
 class CustomerController(private val customerService: CustomerService) {
 
-    @GetMapping("/all")
+    @GetMapping
     fun getAll() = customerService.getAllCustomer()
 
     @GetMapping("/{id}")
